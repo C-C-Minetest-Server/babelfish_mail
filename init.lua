@@ -27,9 +27,7 @@ local function translate_mail(mail_msg, target, callback)
 
     local specified_source = "auto"
     for _, line in ipairs(string.split(mail_msg.body, "\r?\n", false, -1, true)) do
-        print(line)
         local _, _, detected = string.find(line, "^#Sourcelang: ([a-zA-Z-_]+)$")
-        print(detected)
         if detected then
             detected = babelfish.validate_language(detected)
             if detected then
