@@ -1,0 +1,8 @@
+# textdomain: babelfish_mail
+
+##[ init.lua ]##
+Language detected: @1=
+If this is wrong, write #Sourcelang: <language code> in your message.=
+Translated: @1=
+Translate incoming mails=
+Translate mails not in your preferred language.=
