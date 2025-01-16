@@ -58,6 +58,8 @@ local function do_translate(original_mail_msg, language, targets)
         if not succeed then
             return core.log("warning", string.format("Translated mail from %s (detected: %s) to %s failed: %s",
                 source_language, source, language, dump(original_mail_msg)))
+        elseif language == source then
+            return
         end
         translated =
             S("Language detected: @1", source) .. "\n" ..
